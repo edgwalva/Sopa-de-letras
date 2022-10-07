@@ -1,0 +1,108 @@
+.root{
+    -fx-background-color: #4D4EF0;
+    -fx-text-fill: #ffffff; 
+}
+
+#tab{
+    -fx-background-color: white;
+    -fx-text-fill:  white; 
+    
+}
+
+.button{
+    -fx-pref-width: 250px;
+    -fx-pref-height: 70px;
+    -fx-background-color: #26F1DA;
+    -fx-font-size: 15px;
+    -fx-font-family: "Arial Black";
+    -fx-text-fill: black; 
+}
+
+#encabezado{    
+    -fx-background-color:  #26F1DA;
+}
+
+#configuraciones{
+    -fx-text-fill: white;   
+    -fx-font-size: 13px;
+}
+/*
+
+.text-field{
+   -fx-font-size: 13px;
+   -fx-font-family: "Arial Black";
+   -fx-fill: #ffeb9d;
+   -fx-text-fill: black;
+}
+
+
+.label{   
+   -fx-font-size: 14px;
+   -fx-font-family: "Arial Black";
+}
+
+#mensajeOculto{
+   -fx-font-size: 12px;
+   -fx-font-family: "Times New Roman";
+}
+
+#probando{
+    -fx-background-color: yellow;
+}
+
+#logo{
+    -fx-background-color:#262324
+}
+
+#fondoMapa{
+     -fx-background-image: url("../imagenes/pisoMapa.png");
+     -fx-background-size: 100% 100%;
+}
+
+#fondoGraficos{
+     -fx-background-color: white
+}
+
+#etiquetas{   
+   -fx-font-size: 18px;
+   -fx-font-family: "Arial Black";
+   -fx-text-decoration: underline
+}
+
+#btnNoSeleccionado{
+    -fx-background-color: black;
+}
+
+#btnSeleccionado{
+    -fx-background-color: #585759;
+}
+
+#accesoSi{
+    -fx-background-color:  linear-gradient(to right, rgba(0,255,0,0), rgba(0,255,0,1));         
+}
+
+#accesoNo{
+    -fx-background-color:  linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));         
+}
+
+#accesoSinColor{
+    -fx-background-color:  linear-gradient(to bottom right, rgba(55,55,0,0), rgba(55,55,0,1));         
+}
+
+#botonesTeclado{
+    -fx-background-color: white;
+    -fx-pref-width: 50px;
+    -fx-pref-height: 50px;
+    -fx-text-fill: black;
+    -fx-font-size: 14px;    
+}
+
+#botonesTeclado:hover {
+    -fx-background-color: blueviolet;        
+}
+
+#botonesTeclado:active {
+    -fx-background-color: yellow;        
+}
+
+*/

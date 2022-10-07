@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="523.0" prefWidth="579.0" stylesheets="@../css/estilos.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.InicioController">
+   <top>
+      <VBox id="encabezado" alignment="CENTER" prefHeight="115.0" prefWidth="474.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="99.0" fitWidth="470.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../recursos/imagenes/SOPA%20DE%20LETRAS.png" />
+               </image>
+            </ImageView>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab id="tab" text="Inicio">
+               <content>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                     <children>
+                        <Button fx:id="btnNormal" mnemonicParsing="false" onAction="#empezarNormal" prefHeight="70.0" prefWidth="223.0" text="Normal" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin></Button>
+                        <Button fx:id="btnExtreme" mnemonicParsing="false" onAction="#empezarExtreme" text="Extreme" textAlignment="CENTER" VBox.vgrow="ALWAYS" />
+                        <Button fx:id="btnNumerica" mnemonicParsing="false" onAction="#empezarNumerica" text="Numérica" textAlignment="CENTER" VBox.vgrow="ALWAYS" />
+                     </children>
+                     <padding>
+                        <Insets left="10.0" right="10.0" />
+                     </padding>
+                  </VBox>
+               </content>
+          </Tab>
+          <Tab id="tab" text="Configuraciones">
+            <content>
+                  <BorderPane>
+                     <center>
+                        <GridPane alignment="CENTER">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="183.0" minWidth="10.0" prefWidth="179.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="310.0" minWidth="10.0" prefWidth="299.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <opaqueInsets>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </opaqueInsets>
+                           <children>
+                              <Label text="Numero de Jugadores:" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font></Label>
+                              <Label text="Tema del juego:" textFill="WHITE" GridPane.rowIndex="1">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font></Label>
+                              <Label text="Idioma:" textFill="WHITE" GridPane.rowIndex="2">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font></Label>
+                              <Label text="Color del sombreado:" textFill="WHITE" GridPane.rowIndex="3">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font></Label>
+                              <ColorPicker fx:id="pckColorSombra" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <value>
+                                    <Color />
+                                 </value></ColorPicker>
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <children>
+                                    <RadioButton fx:id="rdEspanol" mnemonicParsing="false" text="Español" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font></RadioButton>
+                                    <RadioButton fx:id="rdIngles" mnemonicParsing="false" text="Inglés" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font></RadioButton>
+                                 </children>
+                              </HBox>
+                              <ComboBox fx:id="cbTemaJuego" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Spinner fx:id="spnJugadores" GridPane.columnIndex="1" />
+                              <Label text="Tablero:" textFill="WHITE" GridPane.rowIndex="5">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font></Label>
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="15.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                 <children>
+                                    <Label prefHeight="22.0" prefWidth="20.0" text="F:" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font></Label>
+                                    <Spinner fx:id="spnFilas" prefHeight="25.0" prefWidth="100.0" />
+                                    <Label prefHeight="22.0" prefWidth="20.0" text="C:" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font></Label>
+                                    <Spinner fx:id="spnCol" prefHeight="25.0" prefWidth="100.0" />
+                                 </children>
+                              </HBox>
+                              <Label text="Color del fondo del tablero:" textFill="WHITE" GridPane.rowIndex="4">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font></Label>
+                              <ColorPicker fx:id="pckColorFondo" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <value>
+                                    <Color />
+                                 </value></ColorPicker>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                           </padding>
+                        </GridPane>
+                     </center>
+                     <bottom>
+                        <HBox alignment="CENTER" prefHeight="33.0" prefWidth="474.0" spacing="15.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Button fx:id="btnGuardar" mnemonicParsing="false" onAction="#guardarConf" text="Guardar" />
+                              <Button fx:id="btnDefecto" mnemonicParsing="false" onAction="#cargarValoresPredeterminados" text="Restaurar por defecto" />
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" top="10.0" />
+                           </padding>
+                        </HBox>
+                     </bottom>
+                  </BorderPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>
